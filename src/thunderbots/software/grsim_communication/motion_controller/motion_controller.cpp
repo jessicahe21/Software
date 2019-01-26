@@ -25,7 +25,7 @@ MotionController::Velocity MotionController::bangBangVelocityController(
 {
     MotionController::Velocity robot_velocities;
 
-    // if the change is time is somehow negative or zero, just return the current robot
+    // if the change in time is somehow negative or zero, just return the current robot
     // velocity
     // TODO: Implement exception handling for negative time case
     // See issue #123
