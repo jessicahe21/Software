@@ -54,7 +54,7 @@ namespace MotionController
         double kick_speed_meters_per_second;
         // Whether or not the robot should chip the ball instead of kick it when it makes
         // contact with the ball. If this value is false, the robot will kick the ball.
-        // If it is true, the robot will kick the ball.
+        // If it is true, the robot will chip the ball.
         bool chip_instead_of_kick;
         // Whether or not the robot's dribbler should be on. Dribbler speed cannot be
         // controlled in grSim

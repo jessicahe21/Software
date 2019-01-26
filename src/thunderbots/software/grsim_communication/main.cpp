@@ -4,6 +4,8 @@
 #include <thunderbots_msgs/PrimitiveArray.h>
 
 #include "ai/primitive/move_primitive.h"
+#include "ai/primitive/chip_primitive.h"
+#include "ai/primitive/kick_primitive.h"
 #include "ai/primitive/primitive.h"
 #include "geom/point.h"
 #include "grsim_communication/grsim_backend.h"
@@ -82,6 +84,9 @@ int main(int argc, char** argv)
         // Spin once to let all necessary callbacks run
         // The callbacks will populate the primitives vector
         ros::spinOnce();
+
+        primitives.emplace_back(new ChipPrimitive(0, Point(0, 0), Angle::zero(), 3));
+        primitives.emplace_back(new KickPrimitive(0, Point(0, 0), Angle::zero(), 1));
 
         grsim_backend.sendPrimitives(primitives, friendly_team);
 
