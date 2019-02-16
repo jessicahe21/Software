@@ -2,6 +2,15 @@
 
 #include "geom/point.h"
 #include "geom/rectangle.h"
+<<<<<<< HEAD
+=======
+
+typedef enum
+{
+    EAST,  // positive X side according to vision
+    WEST   // negative X side
+} FieldSide;
+>>>>>>> b1b89ce7c8be1b575b361e7229612d0259842f7e
 
 /**
  * Exposes the dimensions of various parts of the field.
@@ -214,6 +223,20 @@ class Field
      * @return the size of the margin/bounds around the field
      */
     double boundaryWidth() const;
+
+    /**
+     * Returns whether p is in the friendly defense area
+     *
+     * @returns true if point p is in friendly defense area
+     */
+    bool pointInFriendlyDefenseArea(const Point p) const;
+
+    /**
+     * Returns whether p is in the enemy defense area
+     *
+     * @returns true if point p is in enemy defense area
+     */
+    bool pointInEnemyDefenseArea(const Point p) const;
 
     /**
      * Compares two fields for equality
