@@ -4,16 +4,22 @@
 #include <thunderbots_msgs/World.h>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 #include "ai/primitive/move_primitive.h"
 #include "ai/primitive/chip_primitive.h"
 #include "ai/primitive/kick_primitive.h"
 =======
 >>>>>>> b20161dc21a1bd66f3c4e146f1399408ab1a16f6
+=======
+#include "ai/primitive/chip_primitive.h"
+>>>>>>> 2e64dafe0f472a05db6aefebd9d16952abd142b8
 #include "ai/primitive/primitive.h"
 #include "ai/primitive/primitive_factory.h"
 #include "grsim_communication/grsim_backend.h"
 #include "util/constants.h"
 #include "util/logger/init.h"
+#include "util/parameter/dynamic_parameter_utils.h"
+#include "util/parameter/dynamic_parameters.h"
 #include "util/ros_messages.h"
 
 // Member variables we need to maintain state
@@ -62,6 +68,7 @@ int main(int argc, char** argv)
     Util::Logger::LoggerSingleton::initializeLogger(node_handle);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     // Initialize variables
     primitives                 = std::vector<std::unique_ptr<Primitive>>();
     GrSimBackend grsim_backend = GrSimBackend(NETWORK_ADDRESS, NETWORK_PORT);
@@ -87,6 +94,12 @@ int main(int argc, char** argv)
         tick_rate.sleep();
     }
 =======
+=======
+    // Initialize Dynamic Parameters
+    auto update_subscribers =
+        Util::DynamicParameters::initUpdateSubscriptions(node_handle);
+
+>>>>>>> 2e64dafe0f472a05db6aefebd9d16952abd142b8
     // Services any ROS calls in a separate thread "behind the scenes". Does not return
     // until the node is shutdown
     // http://wiki.ros.org/roscpp/Overview/Callbacks%20and%20Spinning

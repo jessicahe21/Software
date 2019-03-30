@@ -10,6 +10,10 @@
 const double BALL_MAX_SPEED_METERS_PER_SECOND = 6.5;
 // The max allowed radius of the robots, in metres
 const double ROBOT_MAX_RADIUS_METERS = 0.09;
+// The distance from the center of the robot to the front face (the flat part), in meters
+const double DIST_TO_FRONT_OF_ROBOT_METERS = 0.07;
+// The distance from one end of the dribbler to the other
+const double DRIBBLER_WIDTH = 0.088;
 // The approximate radius of the ball according to the SSL rulebook
 const double BALL_MAX_RADIUS_METERS = 0.0215;
 // The maximum number of robots we can communicate with over radio.
@@ -25,6 +29,11 @@ const double ROBOT_MAX_ACCELERATION_METERS_PER_SECOND_SQUARED = 3.0;
 // The maximum angular acceleration achievable by our robots, in radians per second
 // squared
 const double ROBOT_MAX_ANG_ACCELERATION_RAD_PER_SECOND_SQUARED = 10.0;
+
+// The maximum speed attainable by enemy robots
+const double ENEMY_ROBOT_MAX_SPEED_METERS_PER_SECOND = 3.0;
+// The maximum acceleration achievable by enemy robots, in metres per seconds squared.
+const double ENEMY_ROBOT_MAX_ACCELERATION_METERS_PER_SECOND_SQUARED = 4.0;
 
 /* Unit Conversion */
 const double MILLIMETERS_PER_METER = 1000.0;
